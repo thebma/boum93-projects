@@ -1,0 +1,17 @@
+﻿.info-panel 
+{
+    background-color: rgba(30,30,30, .7)
+}
+
+.stats-list
+{
+    margin-top: 20px;
+    margin-left: -10px;
+    list-style: none;
+    color: white;
+}
+
+.stats-img
+{
+
+}

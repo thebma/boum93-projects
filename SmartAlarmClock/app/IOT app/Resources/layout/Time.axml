@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="@string/header_time"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header_time"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" />
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:text="@string/text_select_date"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_select_date" />
+        <DatePicker
+            android:layout_width="wrap_content"
+            android:layout_height="288.0dp"
+            android:layout_below="@id/text_select_date"
+            android:id="@+id/dt_time_picker"
+            android:datePickerMode="spinner"
+            android:minWidth="25px"
+            android:minHeight="25px" />
+        <TextView
+            android:text="@string/text_select_time"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dt_time_picker"
+            android:id="@+id/text_select_time"
+            android:layout_marginTop="20dp" />
+        <Button
+            android:text="@string/btn_set_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/np_time_hour"
+            android:id="@+id/btn_set_time"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_marginTop="5dp" />
+        <Button
+            android:text="@string/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_time_cancel"
+            android:layout_below="@+id/btn_set_time"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:backgroundTint="#ffffbebe" />
+        <NumberPicker
+            android:id="@+id/np_time_hour"
+            android:layout_width="197dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/text_select_time"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_toRightOf="@+id/np_time_hour" />
+        <NumberPicker
+            android:id="@+id/np_time_minute"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:layout_toRightOf="@+id/np_time_hour"
+            android:layout_below="@+id/text_select_time"
+            android:layout_marginLeft="5dp" />
+    </RelativeLayout>
+</LinearLayout>

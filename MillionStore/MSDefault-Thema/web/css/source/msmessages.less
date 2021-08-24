@@ -1,0 +1,51 @@
+// ======== MESSAGE POSITION =========== //
+.messages {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+// ========= SUCCESS MESSAGE ============ //
+.message.success, .message.error, .message.info {
+    color: white;
+    background-color: black;
+    padding: 25px 40px;
+    font-size: 1.5rem;
+}
+
+.message.success a, .message.error a, .message.info a {
+    color: white;
+    text-decoration: underline;
+}
+
+.message.success a:visited, .message.error a:visited, .message.info:visited {
+    color: white;
+    text-decoration: underline;
+}
+
+.message.success a:hover, .message.error a:hover, .message.info:hover {
+    color: white;
+}
+
+//Icons.
+.mixin-default-icon {
+    margin: 3px;
+    font-size: 2.5rem;
+}
+
+.message.success > *:first-child:before {
+    color:green;
+    .mixin-default-icon()
+}
+
+.message.error > *:first-child:before {
+    color:red;
+    .mixin-default-icon()
+}
+
+.message.info > *:first-child:before {
+    color: rgb(255, 217, 0);
+    .mixin-default-icon()
+}

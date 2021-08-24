@@ -1,0 +1,33 @@
+@font-face {
+	font-family: roboto;
+	src: url(../fonts/roboto.ttf);
+}
+
+.header {
+	border-bottom: 2px solid #000;
+}
+
+.header h1 {
+	font-family: roboto;
+	font-size: 80px;
+	margin-bottom: 0;
+}
+
+.header p {
+	font-family: arial;
+	font-size: 17px;
+	margin-left: 190px;
+	margin-bottom: 0;
+}
+
+.header p#special {
+	margin-left: 280px;
+}
+
+/* Van naar plaatje */
+
+.van_naar {
+	background: url(../img/leerlijnen2/van_naar.png);
+	height: 171px;
+	background-size: 100% 100%;
+}

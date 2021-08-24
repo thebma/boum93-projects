@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <link src="js/review-hack.js"/>
+        <link src="js/addtocart-scroll.js"/>
+    </head>
+    <body>
+        <referenceBlock name="product.info.sku" remove="true" />
+        <referenceBlock name="product.info.social" remove="true"/>
+        <referenceBlock name="product.info.stock.sku" remove="true"/>
+        <referenceBlock name="product.info.overview" remove="true"/>
+
+        <move element="page.main.title" destination="product.info.main" before="product.info.price"/>
+        <move element="product.info.description" destination="product.info.main" after="product.info.price"/>
+
+        <move element="product.info.details" destination="product.info.main" after="-"/>
+        <move element="product.info.review.form" destination="main.content" after="product.info.review"/>
+    </body>
+</page>

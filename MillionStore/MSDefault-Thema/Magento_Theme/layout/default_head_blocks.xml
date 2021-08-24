@@ -1,0 +1,10 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <css src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" src_type="url"/>
+
+        <!-- <link src="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&amp;family=Josefin+Slab:wght@600&amp;display=swap" src_type="url" rel="stylesheet"/> -->
+        <link src="https://fonts.googleapis.com/css2?family=Bitter:wght@100;300;500;700;900&amp;display=swap" src_type="url" rel="stylesheet"/>
+        <!-- <link src="https://fonts.googleapis.com/css2?family=Roboto:wght@500&amp;display=swap" src_type="url" rel="stylesheet"/> -->
+    </head>
+</page>

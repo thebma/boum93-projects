@@ -1,0 +1,16 @@
+{
+    "name": "millionstore/msdefault",
+    "description": "N/A.",
+    "require": {
+        "php": "~5.4 | ^7.0",
+        "magento/theme-frontend-blank": "100.0.*",
+        "magento/framework": "100.0.*"
+    },
+    "type": "magento-theme",
+    "version": "100.0.1",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ]
+    }
+}

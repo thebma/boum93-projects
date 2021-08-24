@@ -1,0 +1,27 @@
+﻿@{
+    WishlistController controller = new WishlistController();
+
+    Page.Title = "Wishlist";
+    Page.ContentWidth = 7;
+
+    Layout = "~/Layouts/_DefaultLayout.cshtml";
+
+    if(!Authenication.LoggedIn)
+    {
+        Response.Redirect("Error.cshtml?action=403");
+    }
+
+    string wishlistId = controller.GetLoggedInUserWishList(Authenication.LoginName);
+    bool hasWishlist = !string.IsNullOrEmpty(wishlistId);
+}
+
+<div class="main-content col-md-8 offset-md-2">
+    <div class="col-md-12">
+        <div class="row">
+            @RenderPage("~/Partials/Wishlist/_Code.cshtml", new {
+                HasWishlist = hasWishlist,
+                WishlistCode = wishlistId
+            })
+        </div>
+    </div>
+</div>

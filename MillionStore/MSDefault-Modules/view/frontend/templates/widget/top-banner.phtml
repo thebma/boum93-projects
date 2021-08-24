@@ -1,0 +1,49 @@
+<?php
+
+$image = $this->getViewFileUrl('images/ms_topbanner.webp');
+
+?>
+
+<div class="topbanner">
+    <img class="image" src="<?= $image ?>" alt="Him and Her"/>
+    <div id="menHoverOver" class="overlay men">
+        <h2 class="text" id="menText">Herenkleding</h2>
+    </div>
+    <div id="womenHoverOver" class="overlay women">
+        <h2 class="text" id="womenText">Vrouwenkleding</h2>
+    </div>
+</div>
+
+<script>
+    //CSS seems too inept to deal with hover using absolute positioning.
+    //  Sooooo lets try js then!
+    let menHoverOver = document.getElementById("menHoverOver");
+    let womenHoverOver = document.getElementById("womenHoverOver");
+    let menHoverText = document.getElementById("menText");
+    let womenHoverText = document.getElementById("womenText");
+
+
+    function RegisterHoverOverElement(element, text, url)
+    {
+        element.addEventListener("mouseenter", () => OnHoverEnter(element, text));
+        element.addEventListener("mouseleave", () => OnHoverLeave(element, text));
+        element.addEventListener("click", () => GotoUrl(url));
+    }
+
+    function OnHoverEnter(element, text) {
+        element.classList.add("highlight");
+        text.classList.add("text-highlight");
+    }
+
+    function OnHoverLeave(element, text) {
+        element.classList.remove("highlight");
+        text.classList.remove("text-highlight");
+    }
+
+    function GotoUrl(url) {
+        location.href = url;
+    }
+
+    RegisterHoverOverElement(menHoverOver, menHoverText, "/mannen");
+    RegisterHoverOverElement(womenHoverOver, womenHoverText, "/vrouwen");
+</script>

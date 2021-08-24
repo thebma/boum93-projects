@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">Smart Alarm Clock App</string>
+    <string name="action_settings">Settings</string>
+    
+    <!-- Headers-->
+    <string name="header_connections">Connection details</string>
+    <string name="header_alarm">Alarm management</string>
+    <string name="header_alarm2">Alarms</string>
+    <string name="header_lights">Lights management</string>
+    <string name="header_time"> Time management</string>
+    <string name="header_addeditalarm"> Add or edit alarms</string> 
+
+    <!-- General strings -->
+    <string name="btn_cancel">Back</string>
+    
+    <!-- Main activity -->
+    <string name="text_main_header">Quick menu</string>
+    <string name="text_main_header2">Settings</string>
+    <string name="btn_quick_snooze">Snooze alarms</string>
+    <string name="btn_quick_stop">Stop alarms</string>
+    <string name="btn_alarm_management">Alarm management</string>
+    <string name="btn_light_management">Light management</string>
+    <string name="btn_connection_management">Connection management</string>
+    <string name="btn_time_management">Time management</string>
+    <string name="text_status">Status: disconnected</string>
+
+    <!-- Connection actvity-->
+    <string name="text_connection_status">Status</string>
+    <string name="text_connection_status_value">Disconnected</string>
+    <string name="text_connection_ip">IP Address</string>
+    <string name="text_connection_ip_value">n.a.</string>
+    <string name="text_connection_port">Port</string>
+    <string name="text_connection_port_value">n.a.</string>
+    <string name="text_connection_config">Network configuration:</string>
+    <string name="etext_connection_ip">192.168.1.2</string>
+    <string name="etext_connection_port">0</string>
+    <string name="btn_connection_connect">Connect</string>
+    <string name="btn_connection_disconnect">Disconnect</string>
+
+    <!-- Alarm activty-->
+    <string name="btn_alarm_create">New alarm...</string>
+    <string name="cb_calendar">Schedule alarms from calendar</string>
+    <string name="text_alarm_explanation">Automatic scheduling will take the first item from your calendar and wake you up 1 hour ahead of time. If there are no items, the alarm will not go off.</string>
+    <string name="text_alarm_explanation2">Tap one of the alarms to edit them or remove the alarm entirely.</string>
+
+    <!-- Add/Edit alarm activity-->
+    <string name="text_alarm_name">Alarm name:</string>
+    <string name="text_alarm_date">Alarm date:</string>
+    <string name="text_alarm_time">Alarm time:</string>
+    <string name="text_alarm_time_hour">Hour:</string>
+    <string name="text_alarm_minutes">Minutes:</string>
+    <string name="btn_alarm_set">Save alarm</string>
+    <string name="btn_alarm_cancel">Cancel</string>
+    <string name="btn_alarm_remove">Remove alarm</string>
+    
+    <!-- Lights activity-->
+    <string name="text_lights_explanation">Select one of the following to turn the socket on when the alarm rings. The changes will automatically sync with the alarm clock upon changing.</string>
+    <string name="cb_light1">Light socket 1</string>
+    <string name="cb_light2">Light socket 2</string>
+    <string name="cb_light3">Light socket 3</string>
+    <string name="cb_light4">Light socket 4</string>
+    <string name="cb_light5">Light socket 5</string>
+
+    <!-- Time activity -->
+    <string name="text_select_date">Select the date:</string>
+    <string name="text_select_time">Select the time:</string>
+    <string name="btn_set_time">Set date and time</string>
+
+    <!-- Toasts -->
+    <string name="sockerr_duplicate">There is already an active connection</string>
+    <string name="sockerr_timeout">The connection has timed out</string>
+    <string name="sockerr_failed">An error has occured whilest connecting</string>
+    <string name="error_invalid_port">The given port is invalid</string>
+    <string name="error_invalid_ip">The given IP Address is invalid</string>
+    <string name="info_connected">Connected</string>
+    <string name="info_disconnected">Disconnected</string>
+    <string name="na">n.a.</string>
+    <string name="toast_alarm_name_invalid"> The given alarm name is invalid</string>
+    <string name="toast_alarm_time_invalid"> You cannot schedule alarms in the past.</string>
+    <string name="toast_connected">Connected to alarm clock</string>
+    <string name="toast_disconnected">Disconnected to alarm clock</string>
+
+</resources>

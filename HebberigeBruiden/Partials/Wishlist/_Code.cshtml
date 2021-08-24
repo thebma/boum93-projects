@@ -1,0 +1,22 @@
+﻿<div class="container col-md-12">
+    <div class="row">
+        <h2> Wishlist code </h2>
+    </div>
+
+    <br/>
+
+    <div id="#code" class="row">
+
+        @{ 
+            string code =  Page.HasWishlist ? Page.WishlistCode : "????????";
+        }
+
+        <input id="code-input" class="form-control" type="text" value="@code" readonly/>
+ 
+        @if(!Page.HasWishlist)
+        {
+            <a id="code-btn" href="~/CreateWishlist.cshtml" class="btn btn-large btn-success">Create!</a>
+        }
+    </div>
+
+</div>

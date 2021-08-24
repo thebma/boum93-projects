@@ -1,0 +1,29 @@
+@promotron-size: 750px;
+@promotron-bottom-space: 30px;
+@promotron-bottom-border: 10px #333 solid;
+
+@promotron-content-size: 50px;
+
+
+.promotron-wrapper {
+    background-size: cover !important;
+
+    display: flex;
+    height: @promotron-size;
+
+    margin-bottom: @promotron-bottom-space;
+    border-bottom: @promotron-bottom-border;
+}
+
+.promotron-content {
+    margin: auto;
+    padding: 50px;
+    background-color: rgba(255,255,255, 0.96);
+    border: 2px #000 dashed;
+}
+
+.promotron-content > * {
+    width: 100%;
+    color: black;
+    text-align: center;
+}

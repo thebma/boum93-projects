@@ -1,0 +1,34 @@
+<view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/view.xsd">
+    <media>
+        <images module="Magento_Catalog">
+            <!-- Catalog widget images.  -->
+            <image id="category_page_grid" type="small_image">
+                <width>630</width>
+                <height>944</height>
+            </image>
+            <image id="category_page_list" type="small_image">
+                <width>630</width>
+                <height>944</height>
+            </image>
+            <image id="new_products_content_widget_grid" type="small_image">
+                <width>630</width>
+                <height>944</height>
+            </image>
+
+            <!-- Catalog product page images. -->
+            <image id="product_page_image_large" type="image"/>
+            <image id="product_page_image_medium" type="image">
+                <width>900</width>
+                <height>1349</height>
+            </image>
+            <image id="product_page_main_image" type="image">
+                <width>900</width>
+                <height>1349</height>
+            </image>
+            <image id="product_page_main_image_default" type="image">
+                <width>900</width>
+                <height>1349</height>
+            </image>
+        </images>
+    </media>
+</view>

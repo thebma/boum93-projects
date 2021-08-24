@@ -1,0 +1,44 @@
+.privacy-container {
+    height: 40px;
+    text-align: center;
+    background-color: #fbfbfb;
+    color: black;
+    position: fixed;
+    bottom: 0;
+    z-index:999;
+    width: 100%;
+
+    display: none;
+}
+
+.privacy-container a, .privacy-container div i {
+    color: black;
+    margin-top: 10px;
+}
+
+.privacy-container p, .privacy-container div, .privacy-container div i {
+    display: inline-block;
+}
+
+.privacy-container a:visited {
+    color: black;
+}
+
+.privacy-container a:hover {
+    color: #bb0000;
+}
+
+.privacy-container div i:hover {
+    color: #bb0000;
+}
+
+@media screen and (max-width: 750px) {
+    .privacy-container{
+        height: 120px;
+    }
+
+    .privacy-container .icon {
+        width: 100%;
+        font-size: 2.5rem;
+    }
+}

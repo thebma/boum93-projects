@@ -1,0 +1,161 @@
+@newsletter-padding-x: 20px;
+@newsletter-padding-y: 30px;
+
+@bottom-width: 20%;
+@bottom-width-responsive: 50%;
+
+// The inner container of the entire footer.
+.page-footer .footer {
+    padding: 0;
+    margin: 0;
+
+    width: 100%;
+    max-width: 100%;
+
+    background-color: black;
+    padding: 25px;
+}
+
+// Color our anchor links white.
+.page-footer .footer a {
+    color:white;
+}
+
+// Set the footer link list heading.
+.footer-link-title {
+    font-size: 1.66rem;
+    font-weight: 700;
+    color:white;
+    padding-bottom: 20px;
+}
+
+// Align the lists of links inside the footer for "left floated" lists.
+.links-left {
+    display: inline-block;
+    padding-right: 5%;
+}
+
+// Align the lists of links inside the footer for right floated elements.
+.links-right {
+    float: right;
+}
+
+// Give the links in right lists a border + padding.
+.links-right ul li a {
+    display: block;
+    border: 2px white solid;
+    padding: 20px;
+    text-align: center;
+}
+
+.links-right ul li a:hover {
+    background-color: white;
+    border: 2px black solid;
+    color: black;
+}
+
+//  Make the copyright text in the footer some margin and color.
+.copyright {
+    color:white;
+    text-align: center;
+    margin: auto !important;
+    width: @bottom-width;
+}
+
+// <!-- Newsletter formatting -->
+.block.newsletter {
+    display: block;
+
+    margin: 0;
+    padding: @newsletter-padding-y @newsletter-padding-x @newsletter-padding-y @newsletter-padding-x;
+    background-color: #fbfbfb;
+
+    width: ~"calc(100% - @{newsletter-padding-x} * 2)";
+    max-width: ~"calc(100% - @{newsletter-padding-x} * 2)";
+
+    border-top: 1px solid #ededed;
+}
+
+.block.newsletter .field .control {
+    margin-left: 0;
+    max-width: 100%;
+}
+
+// Align the news letter title with the input box.
+.block.newsletter .title {
+    display: inline;
+    line-height: 32px;
+}
+
+// Change the subscribe button.
+.action.subscribe.primary {
+    color: white;
+    background-color: black;
+    border: 0;
+    border-radius: 0px;
+}
+
+.block.newsletter .action.subscribe
+{
+    border: 0;
+    border-radius: 0px;
+}
+
+.social-media-icons {
+    width: @bottom-width;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    margin: auto;
+}
+
+.social-media-icons a i:hover {
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.social-media-icons a i:visited {
+    color: white;
+    border-radius: 5px;
+}
+
+.social-media-icons a i {
+    padding: 5px;
+}
+
+.footer.links.textlist {
+    color: white;
+}
+
+// == Footer responsive == //
+@media screen and (max-width: 1100px) {
+    .links-right { 
+        float: none; 
+    }
+    
+    .links-left { 
+        display: inline-block;
+        width: 50%;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .links-left {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    li.nav.item {
+        width: 90%;
+    }
+
+    .social-media-icons {
+        width: @bottom-width-responsive;
+    }
+
+    .copyright {
+        width: @bottom-width-responsive;
+    }
+}

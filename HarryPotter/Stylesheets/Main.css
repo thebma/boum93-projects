@@ -1,0 +1,140 @@
+﻿@font-face {
+    font-family: harry;
+    src: url("../Content/Font/harryp.ttf");
+}
+
+/* By default make all the text white*/
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+h1, h2, h3, h4, h5, p, a, th, tr, td, label, button, li {
+    color: white;
+}
+
+h1.harry-font {
+    font-family: harry;
+    font-size: 86px;
+}
+
+h2.harry-font {
+    font-family: harry;
+    font-size: 66px;
+}
+
+h3.harry-font {
+    font-family: harry;
+    font-size: 46px;
+}
+
+h4.harry-font {
+    font-family: harry;
+    font-size: 36px;
+}
+
+h5.harry-font {
+    font-family: harry;
+    font-size: 27px;
+}
+
+/* Avoid normalize.css from setting our button colors ;)*/
+button {
+    color: black;
+}
+
+a:hover {
+    color: white;
+}
+
+/*Set the default background color*/
+body {
+    overflow-x: hidden;
+    margin-bottom: 60px;
+}
+
+
+.background {
+    background-image: url("../Content/Images/layout/background2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Navigation bar formatting */
+.navbar-active {
+    background-color: cornflowerblue;
+}
+
+.navbar-colors {
+    background-color: rgb(40, 40, 40);
+    margin: 0;
+}
+
+.navbar-hamburger-button {
+    color: white;
+    background-color: royalblue;
+}
+
+    .navbar-hamburger-button:hover {
+        color: black;
+        background-color: white;
+    }
+
+ul.nav a:hover {
+    background-color: royalblue !important;
+}
+
+ul.nav a:focus {
+    color: white !important;
+    background-color: royalblue !important;
+}
+
+/* Footer formatting */
+.footer-text {
+    font-size: 15px;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+.footer-position {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.footer-color {
+    color: white;
+    
+   
+}
+
+.footer-copyright {
+    width: 100%;
+    
+}
+
+/* Content of the default page */
+.content {
+    height: 100%;
+}
+
+.logo {
+    width: 50%;
+    height: 50%;
+}
+.button2 {
+    background-color: lightgray;
+    border: 5px;
+    border-radius: 8px;
+    color: black;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}

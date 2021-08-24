@@ -1,0 +1,199 @@
+body{
+
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+nav navbar-nav navbar-right p {
+
+    color:white;
+
+}
+
+.form-control{
+    margin-top:2px;
+}
+
+.feed{
+    margin-top: 2px;
+}
+
+.quest_sub{
+    float: left;
+    margin-top: 2px;
+
+    width: 100%;
+    margin-top: 20px;
+}
+
+#new_cat{
+    display: none;
+}
+
+#new_toets{
+    display: none;
+}
+
+td{
+    text-align: left;
+}
+
+.linkedit{
+    height: 40px;
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+    padding-top:10px;
+}
+
+#multi_one{
+    display: none;
+
+}
+#multi_more{
+    display: none;
+
+}
+
+#quest_open{
+    display: none;
+
+}
+
+#quest_drag{
+    display: none;
+
+}
+
+#quest_open_multi{
+    display: none;
+
+}
+
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+.jumbotron{
+    background-image: url("/img/website/toets_header.png");
+    background-size: cover;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.result-zoek
+{
+    display: inline-block;
+    width: 20%;
+}
+
+.result-caption
+{
+    display:inline-block;
+}
+
+.result-form
+{
+    display: inline-block;
+    width: 100%;
+}
+
+.edit-header
+{
+    margin-top: 20px;
+}
+
+.upload-label {
+    margin-right: 10px;
+    font-weight: normal !important;
+    font-size: 12px;
+    display: inline;
+}
+
+.img-feedback-preview
+{
+    width: 10%;
+    float: right;
+    margin-top:10px;
+}
+
+.img-preview
+{
+    max-width: 14%;
+    float: right;
+    margin-top:-10%;
+
+    margin-bottom: 15px;
+}
+
+
+.feedbackdiv
+{
+    width: 80%;
+    float: left;
+    margin-top: 20px;
+}
+
+.smalltext
+{
+    font-size: 0.7em;
+    font-weight: normal !important;
+}
+
+.rsbtn {
+    clear: both;
+}
+
+#adjustbutton
+{
+    margin-top: 2px;
+    margin-left: 5px;
+    display: inline-block;
+    padding: 6px;
+}
+
+.timefield
+{
+    display: inline-block;
+    float:left;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.timefield label
+{
+    margin-top: 5px;
+}
+
+.categorie
+{
+    display:inline-block;
+    float:left;
+    width: 47%;
+    margin-left: 2%;
+}
+
+.error
+{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.3em;
+}
+
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{{titel}}</title>
+        <?php $this->assets->outputCss() ?>
+
+        <script src="http://f1.eu.readspeaker.com/script/5/ReadSpeaker.js?pids=embhl" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="../../../public/readspeaker/readspeakerskin.css"/>
+        <script type="text/javascript" src="../../../public/readspeaker/readspeaker.js"></script>
+
+        <script type="text/javascript">
+            window.rsConf = {general: {usePost: true}};
+        </script>
+    </head>
+
+    <body>
+        <img src="/public/img/toetsen/{{id}}/{{background}}" id="background">
+
+        {{error}}
+
+        <div id="box">
+            <div class="container-fluid">
+                <div id="top" class="center center-block">
+                    <h1 id="title">{{titel}}</h1><br/>
+                    <i class="font22 icon fa fa-clock-o fa-2x"><span id="time" class="left-padding-10">{{time}}</span></i>
+                    <div style="display: inline-block" class="left-padding-30">
+                        <i class="font22 green icon fa fa-check fa-2x"><span id="correct" class="white left-padding-10">{{correct}}</span></i>&nbsp;
+                        <i class="font22 red icon fa fa-times fa-2x"><span id="wrong" class="white left-padding-10">{{wrong}}</span></i>&nbsp;
+                    </div>
+                </div>
+            </div>
+
+            <div id="content">
+                <div id="readspeaker_button_1" class="rs_skip rsbtn rs_preserve">
+                    <a rel="nofollow" class="rsbtn_play" accesskey="L" title="Laat de tekst voorlezen met ReadSpeaker" href="http://app.eu.readspeaker.com/cgi-bin/rsent?customerid=5&amp;lang=nl_nl&amp;readid=questiontext&amp;url=http://jahwah.nl/vraagtoets">
+                        <span class="rsbtn_left rsimg rspart"><span class="rsbtn_text"><span>Lees voor</span></span></span>
+                        <span class="rsbtn_right rsimg rsplay rspart"></span>
+                    </a>
+                </div>
+
+               {{feedback}}
+
+                <div id="text-wrapper">
+                    <p id="questiontext">{{question}} </p>
+                </div>
+
+                <div id="image-wrapper" class="container-fluid">
+                    <img src="../../../public/img/toetsen/{{id}}/{{image}}" class="img-responsive" alt="questionimage"/>
+                    <i id="zoom" class="fa fa-search col-md-offset-2">
+                        <a data-toggle="modal" data-target="#zoom_img"> Klik om te vergroten </a>
+                    </i>
+                </div>
+                <div id="instruction-wrapper">
+
+                    <p id="instruction-text">
+                        {{instruction}}
+                    <p>
+                </div>
+
+                <form id="answer-form" name="questionform" method="post" action="vraagtoets/process">
+                    {{answers}}
+                </div>
+
+                {{previousbutton}}
+                {{countquestion}}
+                {{skipbutton}}
+                {{nextbutton}}
+
+            </form>
+        </div>
+
+        <div class="modal fade" id="zoom_img" tabindex="-1" role="dialog" aria-labelledby="zoom_img" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <img id="zoom-img" src="../../../public/img/toetsen/{{id}}/{{image}}" class="img-responsive" alt="questionzoomimage"/>
+                </div>
+            </div>
+        </div>
+
+        {{modals}}
+
+
+        <?php $this->assets->outputJs() ?>
+    </body>
+
+    {{log}}
+
+</html>

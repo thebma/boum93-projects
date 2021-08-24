@@ -1,0 +1,35 @@
+<csp_whitelist xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Csp/etc/csp_whitelist.xsd">
+    <policies>
+
+        <policy id="script-src">
+            <values>
+                <value id="cloudflare" type="host">*.cloudflare.com</value>
+                <value id="google-analytics" type="host">www.google-analytics.com</value>
+                <value id="trustedshops" type="host">*.trustedshops.com</value>
+                <value id="usercentrics" type="host">*.usercentrics.eu</value>
+            </values>
+        </policy>
+
+        <policy id="style-src">
+            <values>
+                <value id="cloudflare" type="host">*.cloudflare.com</value>
+                <value id="typekit" type="host">*.typekit.net</value>
+                <value id="boostrapcdn" type="host">*.bootstrapcdn.com</value>
+                <value id="googleapis" type="host">*.googleapis.com</value>
+            </values>
+        </policy>
+
+        <policy id="font-src">
+            <values>
+                <value id="gstatic" type="host">*.gstatic.com</value>
+                <value id="bootstrapcdn" type="host">*.bootstrapcdn.com</value>
+            </values>
+        </policy>
+        
+        <policy id="connect-src">
+            <values>
+                <value id="googleanalytics" type="host">www.google-analytics.com</value>
+            </values>
+        </policy>
+    </policies>
+</csp_whitelist>

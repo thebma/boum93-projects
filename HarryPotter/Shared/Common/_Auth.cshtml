@@ -1,0 +1,23 @@
+﻿@{ 
+
+    //Check if the user has a session, if so, tell the authcontroller to load user data.
+    if (Session["user_loggedin"] != null)
+    {
+        int id = (int)Session["user_id"];
+
+        if (id > 0 && AuthController.LoginId == -1)
+        {
+            AuthController.SetAuthedUser(id);
+        }
+    }
+
+    //Check if the user wants to log out (via query string).
+    if (Request.QueryString["logout"] != null)
+    {
+        Session["user_loggedin"] = false;
+        Session["user_id"] = -1;
+
+        UserController.Invalidate();
+        AuthController.Invalidate();
+    }
+}

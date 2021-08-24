@@ -1,0 +1,4 @@
+[03-Jun-2015 07:05:23 Europe/Berlin] PHP Fatal error:  Using $this when not in object context in /var/www/toetsmaker/app/views/toetsindex/index.phtml on line 7
+[03-Jun-2015 07:07:10 Europe/Berlin] PHP Fatal error:  Using $this when not in object context in /var/www/toetsmaker/app/views/toetsindex/index.phtml.php on line 7
+[12-Jun-2015 13:42:52 Europe/Berlin] PHP Fatal error:  Using $this when not in object context in /var/www/toetsmaker/app/views/toetsindex/index.phtml on line 7
+[13-Jun-2015 03:15:51 Europe/Berlin] PHP Fatal error:  Using $this when not in object context in /var/www/toetsmaker/app/views/toetsindex/index.phtml.php on line 7

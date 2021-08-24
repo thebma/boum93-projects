@@ -1,0 +1,94 @@
+﻿@{
+    RegisterController controller = new RegisterController();
+    controller.SetDebug(AppState["debugMode"]);
+
+    Page.Title = "Register";
+    Page.ContentWidth = 7;
+
+    Layout = "~/Layouts/_DefaultLayout.cshtml";
+
+    Validation.Add("name",
+        Validator.Required("Username cannot be empty"),
+        Validator.StringLength(50, 3, "Username must have atleast 3 character and maximum 50.")
+    );
+
+    Validation.Add("password",
+        Validator.Required("Password cannot be empty"),
+        Validator.StringLength(50, 6, "Password must have atleast 6 character and maximum 50.")
+    );
+
+    Validation.Add("password-confirm",
+        Validator.Required("Password confirm cannot be empty"),
+        Validator.StringLength(50, 6, "Password Confirm must have atleast 6 character and maximum 50.")
+    );
+
+    if(Authenication.LoggedIn)
+    {
+        HttpContext.Current.Response.Redirect("Error.cshtml?action=already_loggedin");
+    }
+
+    if(IsPost)
+    {
+        bool valid = Validation.IsValid();
+
+        string name = Request.Form["name"];
+        string password = Request.Form["password"];
+        string passwordConfirm = Request.Form["password-confirm"];
+
+        if(!password.Equals(passwordConfirm))
+        {
+            Validation.AddFormError("The given passwords do not match.");
+            valid = false;
+        }
+
+        if(valid)
+        {
+            var result = controller.RegisterUser(name, password);
+
+            foreach (string error in result)
+            {
+                Validation.AddFormError(error);
+            }
+        }
+    }
+}
+
+
+<div class="main-content col-md-8 offset-md-2">
+    <div class="col-md-12">
+        <div class="row">
+            <h1>Register</h1>
+        </div>
+
+        <div class="row">
+            <p>
+                Fill out the fields to register a new account!
+            </p>
+        </div>
+
+        <div class="row">
+                @Html.ValidationSummary()
+
+            <form method="post" class="default-form">
+                @AntiForgery.GetHtml()
+                <div class="form-group">
+                    <label class="form-label" for="name">Name</label>
+                    <input name="name" class="form-control" @Validation.For("name")>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" name="password" class="form-control" @Validation.For("password")>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="password-confirm">Confirm password</label>
+                    <input type="password" name="password-confirm" class="form-control" @Validation.For("password-confirm")>
+                </div>
+
+                <br/>
+                <button type="submit" class="btn btn-success">Register</button>
+            </form>
+        </div>
+    </div>
+</div>

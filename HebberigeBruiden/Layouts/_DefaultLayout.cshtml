@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        @RenderPage("~/Partials/_Head.cshtml")
+    </head>
+
+    <body>
+        @{
+            string[] classes =
+            {
+                "container",
+                "fill",
+                 "col-md-" + Page.ContentWidth,
+            };
+        }
+        <div id="content" class="@String.Join(" ", classes)">
+
+            <div class="row flex-banner">
+                @RenderPage("~/Partials/_Banner.cshtml")
+            </div>
+
+            <div class="row flex-navbar">
+                @RenderPage("~/Partials/_Navbar.cshtml")
+            </div>
+
+            <div class="row flex-content">
+                @RenderBody()
+            </div>
+
+            <div class="row flex-footer">
+                @RenderPage("~/Partials/_Footer.cshtml")
+            </div>
+
+        </div>
+    </body>
+</html>
+

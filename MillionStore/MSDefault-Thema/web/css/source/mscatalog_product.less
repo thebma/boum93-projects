@@ -1,0 +1,227 @@
+@review-space: 10px;
+
+//This prevent the fotorama (the main image on the catalog product page) from sliding and creating awkward gaps.
+.product .fotorama__stage__frame .fotorama__img {
+    top: 0 !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    position: static;
+    margin-top: auto !important;
+  }
+
+
+// The "Add To cart" button.
+#product-addtocart-button {
+    background-color: black;
+    padding: 25px;
+    width: 200%;
+    border: 2px solid #000
+}
+
+#product-addtocart-button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #000
+}
+
+// The description that is under the title and price.
+.product.description {
+    margin-top:33px;
+    margin-bottom: 33px;
+}
+
+//Remove the (tab)title from reviews
+.product.data.items > .item.title {
+    display: none;
+}
+
+.product.data.items > .item.content {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+//Remove the border under the reviews
+.review-toolbar {
+    border: 0;
+}
+
+//Style the review block title
+#customer-reviews .block-title {
+    padding-top: 20px;
+}
+
+#customer-reviews .block-title strong {
+    font-size: 2.33rem;
+    font-weight: 700;
+}
+
+.review-item-mix {
+    display: block;
+
+    margin: 0 !important;
+    padding: @review-space 0px;
+    border-bottom: 1px #eee solid;
+
+    width: 100%;
+}
+
+.review-item {
+    .review-item-mix();
+}
+
+.review-item:last-child {
+    .review-item-mix();
+}
+
+.review-title {
+    font-weight: 700;
+    font-size: 1.66rem;
+
+    padding: @review-space 0px;
+    margin: 0;
+}
+
+.review-content {
+    font-size: 1.5rem;
+}
+
+.review-date {
+    font-size: 1.25rem;
+    
+    display: inline-block;
+    color: #bbb;
+}
+
+.review-author {
+    font-size: 1.25rem;
+
+    float: right;
+    color: #bbb;
+}
+
+.review-details {
+    margin-bottom: @review-space;
+}
+
+//Authors name under a review...
+.review-details-value {
+    font-weight: 100;
+    color: #bbb;
+}
+
+.review-fieldset {
+    margin-top: 30px;
+}
+
+// The "submit" review button.
+.review-form .action.submit.primary {
+    color: white;
+    background-color: black;
+    padding: 10px;
+
+    font-weight: 100;
+    border-radius: 5px;
+}
+
+.review-form .action.submit.primary:hover {
+    color: black;
+    background-color: white;
+    padding: 10px;
+
+    font-weight: 100;
+    border-radius: 5px;
+    border: 1px black solid;
+}
+
+//The product title.
+.product-info-main .page-title-wrapper .page-title {
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+// The product price.
+.product-info-main .price-box .price-wrapper .price, .product-options-bottom .price-box .price-wrapper .price {
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+//The "submit your review" portion.
+.review-form {
+    padding: ~"calc(@{review-space} / 2)";
+}
+
+//Format the text/size labels.
+.swatch-option.text {
+    color: black;
+    background-color: white;
+    border: 1px black solid;
+
+    font-size: 1.33rem;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.swatch-option.text.selected {
+    outline: 0;
+    background-color: black !important;
+    border: 1px #aaa solid;
+    color: white;
+    border-radius: 5px;
+
+}
+
+.swatch-option.selected {
+    outline: 0;
+    border: 1px black solid;
+    color: #aaa;
+}
+
+.swatch-option:not(.disabled):hover {
+    outline: 0;
+    color: black;
+    border: 1px #aaa solid;
+}
+
+.swatch-option.image:not(.disabled):hover, .swatch-option.color:not(.disabled):hover {
+    outline: 0;
+    color: black;
+    border: 1px #aaa solid;
+}
+
+//Remove the "as low as" crap.
+.price-container .price-label {
+    display: none !important;
+}
+
+// The share thingies under the add cart.
+.share-header {
+    font-weight: 700;
+    font-size: 2.3rem;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.share-link {
+    display: inline-block;
+    padding: 0px 10px;
+
+    font-size: 2.66rem;
+    
+    color: black;
+    background-color: white;
+    border-radius: 7px;
+
+}
+
+.share-link:visited {
+    color: black;
+}
+
+.share-link i:hover {
+    color: white;
+    background-color: black;
+    border-radius: 7px;
+}

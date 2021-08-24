@@ -1,0 +1,19 @@
+<?php
+
+    //TODO: Change with the language
+    $linkPrivacy = "/privacy";
+    $linkToS = "/algemene-voorwaarden";
+?>
+
+<div class="privacy-container" id="privacy-container">
+    <p class="text">
+        <?= $block->escapeHtml(__(
+            'By using the website you have read and agreed to the <a href="%1">Privacy</a> and <a href="%2">Terms and Conditions</a>',
+            $linkPrivacy,
+            $linkToS
+         ), ['a']);
+        ?>
+    </p>
+    <div class="icon"><i onclick="OnClosePrivacy()" class="fa fa-window-close"></i></div>
+</div>
+<script>function OnClosePrivacy(){CloseDialogue(),WritePrivacyCookie()}function ShowDialogue(){document.getElementById("privacy-container").style.display="block"}function CloseDialogue(){document.getElementById("privacy-container").style.display="none"}function WritePrivacyCookie(){SetCookie("PRIVACY-ACCEPT-TIME","yes",1)}function HasPrivacyCookie(){return"yes"==GetCookie("PRIVACY-ACCEPT-TIME")}function GetCookie(e){for(var o=e+"=",i=decodeURIComponent(document.cookie).split(";"),t=0;t<i.length;t++){for(var n=i[t];" "==n.charAt(0);)n=n.substring(1);if(0==n.indexOf(o))return n.substring(o.length,n.length)}return""}function SetCookie(e,o,i){var t=new Date;t.setTime(t.getTime()+24*i*60*60*1e3);var n="expires="+t.toUTCString();document.cookie=e+"="+o+";"+n}HasPrivacyCookie()||ShowDialogue();</script>

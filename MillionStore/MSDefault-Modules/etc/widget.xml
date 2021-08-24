@@ -1,0 +1,25 @@
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget class="MillionStore\MSDefault\Block\Widget\TopBanner" id="ms-top-banner">
+        <label>TopBanner</label>
+        <description>Hoi</description>
+    </widget>
+
+    <widget id="products_list">
+        <parameters>
+            <parameter name="template" xsi:type="select">
+                <options>
+                    <option name="option_2x" value="MillionStore_MSDefault::widget/product-listing-two.phtml">
+                        <label translate="true">Products listing 2x in a row</label>
+                    </option>
+                    <option name="option_5x" value="MillionStore_MSDefault::widget/product-listing-five.phtml">
+                        <label translate="true">Products listing 5x</label>
+                    </option>
+                    <!-- A product listing for one item, inline with 3 other products. -->
+                    <option name="option_single_inline_3" value="MillionStore_MSDefault::widget/product-listing-single-3x.phtml">
+                        <label translate="true">Products listing single inline 3 in a row.</label>
+                    </option>
+                </options>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

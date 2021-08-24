@@ -1,0 +1,13 @@
+<?php
+    $backgroundStyle = "background: url(" . $block->getPromotionBackdrop() . ");";
+    $isOnHomepage = $block->isOnLandingPage();
+?>
+<!-- Only show on the homepage. -->
+<?php if($isOnHomepage): ?> 
+    <div class="promotron-wrapper" style="<?=$backgroundStyle?>">
+        <div class="promotron-content">
+            <h2><?=$block->escapeHtml($block->getPromotionText());?></h2>
+            <p><?=$block->escapeHtml($block->getPromotionSubText());?></p>
+        </div>
+    </div>
+<?php endif ?>

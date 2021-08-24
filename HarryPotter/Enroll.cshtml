@@ -1,0 +1,137 @@
+﻿@{
+    bool hasPost = false;
+    string uYear = DateTime.Now.ToShortDateString();
+    string uUname = "";
+    string uEmail = "";
+    string uPassword = "";
+    string uPasswordConfirm = "";
+
+    Page.Title = "Enroll";
+    Layout = "~/Shared/_DefaultPage.cshtml";
+
+    //Validation rules for the form.
+    Validation.Add("uUname",
+        Validator.Required("Username cannot be empty"),
+        Validator.StringLength(32, 6, "Username is too long or too short"),
+        Validator.Regex(@"^[A-Za-z0-9_.]+$", "Username contains illegal characters")
+    );
+
+    Validation.Add("uEmail",
+        Validator.Required("Email cannot be empty"),
+        Validator.StringLength(128, 3, "Email is too long or too short"),
+        Validator.Regex(@"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*", "Email format is incorrect")
+    );
+
+    Validation.Add("uPassword",
+        Validator.Required("Password cannot be empty"),
+        Validator.StringLength(1024, 6, "The given password is too short")
+    );
+
+    Validation.Add("uPasswordConfirm",
+        Validator.Required("Password cannot be empty"),
+        Validator.StringLength(1024, 6, "The given password is too short")
+    );
+
+    if (IsPost)
+    {
+        uUname = Request.Form["uUname"];
+        uEmail = Request.Form["uEmail"];
+        uPassword = Request.Form["uPassword"];
+        uPasswordConfirm = Request.Form["uPasswordConfirm"];
+
+        bool isThisPostValid = true;
+        hasPost = true;
+
+        AntiForgery.Validate();
+
+        //Validation rules are violated if this is not true.
+        if (!Validation.IsValid())
+        {
+            isThisPostValid = false;
+        }
+
+        //Password doesn't match...
+        if (!uPassword.Equals(uPasswordConfirm))
+        {
+            ModelState.AddError("noPasswordMatch", "The given passwords do not match.");
+            isThisPostValid = false;
+        }
+
+        if (isThisPostValid)
+        {
+            //Check if the registration was successfull.
+            RegisterState state = AuthController.Register(uUname, uPassword, uEmail);
+
+            switch (state)
+            {
+                case RegisterState.Ok:
+                    Response.Redirect("~/Portal.cshtml");
+                    break;
+                case RegisterState.Failed:
+                    Response.Redirect("~/500.cshtml");
+                    break;
+                case RegisterState.AlreadyExists:
+                    Validation.AddFormError("Username or email already exists!");
+                    break;
+            }
+        }
+        else
+        {
+            Validation.AddFormError("One or more fields are invalid.");
+        }
+    }
+    }
+}
+
+<div class="col-md-12" align="center">
+    <div class="row vm-1">
+        <h1 class="harry-font">Enroll</h1>
+    </div>
+
+    <div class="row vm-1">
+        <p>
+            Look who came back crawling to become a mighty wizard... Alright then... <br />
+            If you are up for the challenge, I guess it won't cause any harm. Now fill in this form and start your journey!
+        </p>
+    </div>
+
+    <div class="row vm-2">
+        <div class="contact-form col-md-offset-3 col-md-6" align="left">
+
+            @Html.ValidationSummary()
+
+            <form method="post">
+                @AntiForgery.GetHtml()
+                <div class="form-group">
+                    <label class="form-label" for="uUname">Username</label>
+                    <input name="uUname" class="form-control" @Validation.For("uUname") required>
+                    @FormHelper.GetFormFieldError("uUname", Validation.IsValid("uUname"), hasPost)
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="uEmail">E-mail Address</label>
+                    <input name="uEmail" class="form-control" @Validation.For("uEmail") required>
+                    @FormHelper.GetFormFieldError("uEmail", Validation.IsValid("uEmail"), hasPost)
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="uPassword">Password</label>
+                    <input type="password" name="uPassword" class="form-control" @Validation.For("uPassword") required>
+                    @FormHelper.GetFormFieldError("uPassword", Validation.IsValid("uPassword"), hasPost)
+                    @FormHelper.GetFormError("noPasswordMatch", hasPost)
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="uPasswordConfirm">Confirm password</label>
+                    <input type="password" name="uPasswordConfirm" class="form-control" @Validation.For("uPasswordConfirm") required>
+                    @FormHelper.GetFormFieldError("uPasswordConfirm", Validation.IsValid("uPasswordConfirm"), hasPost)
+                    @FormHelper.GetFormError("noPasswordMatch", hasPost)
+                </div>
+
+                <button type="submit" class="btn btn-secondary vm-1">Enroll!</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+

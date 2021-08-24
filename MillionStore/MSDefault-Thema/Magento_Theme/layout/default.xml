@@ -1,0 +1,178 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/ms_white_transparent.png</argument>
+                <argument name="logo_alt" xsi:type="string">Million Store</argument>
+                <argument name="logo_width" xsi:type="number">600</argument>
+                <argument name="logo_height" xsi:type="number">250</argument>
+            </arguments>
+        </referenceBlock>
+
+        <referenceBlock name="report.bugs" remove="true"/>
+        <referenceBlock name="top.search" remove="true"/>
+        <referenceBlock name="minicart" remove="true"/>
+        <referenceBlock name="top.links" remove="true"/>
+        <referenceBlock name="header" remove="true"/>
+        <referenceContainer name="header.container" remove="true"/>
+
+        <!-- Remove the footer links -->
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="store_switcher" remove="true"/>
+
+        <!-- Footer blocks.-->
+        <referenceContainer name="footer">
+            <container name="footer.links.info" label="Store Info" htmlTag="div" htmlClass="links-left" before="cms_footer_links_container"/>
+            <container name="footer.links.support" label="Help and support links" htmlTag="div" htmlClass="links-left" after="footer.links.info"/>
+            <container name="footer.links.store" label="Store links" htmlTag="div" htmlClass="links-left" after="footer.links.support"/>
+            <container name="footer.links.buttons" label="Button links" htmlTag="div" htmlClass="links-right" after="footer.links.store"/>
+        </referenceContainer>
+
+        <!-- === CONTAINERS FOR THE LISTS === -->
+        <referenceContainer name="footer.links.info">
+            <container name="footer.links.info.container" htmlTag="div" htmlClass="footer-link-title">
+                <block class="Magento\Framework\View\Element\Text" name="footer.links.info.title">
+                    <arguments>
+                        <argument name="text" xsi:type="string">©MILLION</argument>
+                    </arguments>
+                </block>
+            </container>
+            <block class="Magento\Framework\View\Element\Html\Links" name="footer.links.info.list">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">footer links textlist</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="footer.links.store">
+            <container name="footer.links.store.container" htmlTag="div" htmlClass="footer-link-title">
+                <block class="Magento\Framework\View\Element\Text" name="footer.links.store.title">
+                    <arguments>
+                        <argument name="text" xsi:type="string">ALGEMEEN</argument>
+                    </arguments>
+                </block>
+            </container>
+            <block class="Magento\Framework\View\Element\Html\Links" name="footer.links.store.list">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">footer links</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="footer.links.support">
+            <container name="footer.links.support.container" htmlTag="div" htmlClass="footer-link-title">
+                <block class="Magento\Framework\View\Element\Text" name="footer.links.support.title">
+                    <arguments>
+                        <argument name="text" xsi:type="string">MILLION STORE</argument>
+                    </arguments>
+                </block>
+            </container>
+            <block class="Magento\Framework\View\Element\Html\Links" name="footer.links.support.list">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">footer links</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="footer.links.buttons">
+            <block class="Magento\Framework\View\Element\Html\Links" name="footer.links.buttons.list">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">footer links</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <!-- === POPULATING THE CONTAINER'S LISTS === -->
+        <referenceBlock name="footer.links.info.list">
+            <block class="Magento\Framework\View\Element\Text" name="footer.links.info.list.0">
+                <arguments>
+                        <argument name="text" xsi:type="string">Dracht 124<![CDATA[<br/>]]></argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Text" name="footer.links.info.list.1">
+                <arguments>
+                        <argument name="text" xsi:type="string">8442 BX Heerenveen<![CDATA[<br/>]]></argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Text" name="footer.links.info.list.2">
+                <arguments>
+                        <argument name="text" xsi:type="string">KvK-nummer 77796225<![CDATA[<br/>]]></argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Text" name="footer.links.info.list.3">
+                <arguments>
+                    <argument name="text" xsi:type="string">BTW-nummer: NL003239543B58<![CDATA[<br/>]]></argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+        <!-- Links inside the Store list-->
+        <referenceBlock name="footer.links.store.list">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="footer.links.store.list.2">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Privacy en Cookies</argument>
+                    <argument name="path" xsi:type="string">#</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="footer.links.support.list.3">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Algemene Voorwaarden</argument>
+                    <argument name="path" xsi:type="string">#</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+        <!-- Links inside the Support list-->
+        <referenceBlock name="footer.links.support.list">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="footer.links.support.list.3">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">About Us</argument>
+                    <argument name="path" xsi:type="string">#</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="footer.links.support.list.0">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Bestelling, Levering en Retour</argument>
+                    <argument name="path" xsi:type="string">#</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="footer.links.support.list.2">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Veelgestelde vragen</argument>
+                    <argument name="path" xsi:type="string">#</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+        <!-- Links inside the Buttons list-->
+         <referenceBlock name="footer.links.buttons.list">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="footer.links.buttons.list.0">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Zoek een winkel</argument>
+                    <argument name="path" xsi:type="string">#</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="footer.links.buttons.list.1">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Contact</argument>
+                    <argument name="path" xsi:type="string">#</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+
+        <move element="form.subscribe" destination="page.wrapper" after="main.content"/>
+        <!-- <move element="navigation.sections" destination="root" before="page.wrapper"/> -->
+        <referenceBlock name="navigation.sections" remove="true"/>
+
+        <!-- Get rid of all the "compare" things-->
+        <referenceBlock name="catalog.compare.sidebar" remove="true"/> <!-- Remove sidebar -->
+        <referenceBlock name="catalog.compare.link" remove="true"/> <!-- Remove link in header -->
+        <referenceBlock name="related.product.addto.compare" remove="true"/> <!-- Related product -->
+        <referenceBlock name="category.product.addto.compare" remove="true"/> <!-- Category add compare -->
+        <referenceBlock name="view.addto.compare" remove="true" /> <!-- Product addto compare -->
+
+        <!-- Remove the reorder sidebar on account_index_index -->
+        <referenceBlock name="sale.reorder.sidebar" remove="true"/>
+    </body>
+</page>

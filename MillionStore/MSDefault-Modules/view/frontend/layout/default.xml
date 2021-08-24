@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="root">
+            <block class="MillionStore\MSDefault\Block\Navigation" name="ms.navigation" template="MillionStore_MSDefault::navigation.phtml" before="page.wrapper">
+                <arguments>
+                    <argument name="logo_src_dark" xsi:type="string">images/ms_black_transparent.png</argument>
+                    <argument name="logo_src_light" xsi:type="string">images/ms_white_transparent.png</argument>
+                    <argument name="logo_alt" xsi:type="string">Million Store Logo</argument>
+                    <argument name="logo_width" xsi:type="number">500</argument>
+                    <argument name="logo_height" xsi:type="number">208</argument>
+                </arguments>
+            </block>
+
+            <!-- <block class="MillionStore\MSDefault\Block\Promotron" name="ms.promotron" template="MillionStore_MSDefault::promotron.phtml" after="ms.navigation">
+                <arguments>
+                    <argument name="promotron_image" xsi:type="string">images/ms_backdrop.webp</argument>
+                    <argument name="promotron_heading" xsi:type="string">De herfst en winter is er!</argument>
+                    <argument name="promotron_sub" xsi:type="string">Shop nu, het komt je niet aanwaaien!</argument>
+                </arguments>
+            </block> -->
+        </referenceContainer>
+
+        <referenceContainer name="before.body.end">
+            <block class="MillionStore\MSDefault\Block\PrivacyNotify" name="ms.privacy-notify" template="MillionStore_MSDefault::privacy-notify.phtml">
+            </block>
+        </referenceContainer>
+    </body>
+</page>

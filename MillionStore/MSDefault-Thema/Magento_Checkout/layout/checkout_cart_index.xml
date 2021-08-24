@@ -1,0 +1,14 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <move element="page.main.title" destination="checkout.cart.container" before="-"/>
+
+    <referenceBlock name="checkout.cart.summary.title" remove="true"/>
+    <referenceContainer name="cart.summary">
+        <block class="Magento\Framework\View\Element\Template" name="checkout.cart.summary.title2" before="-" template="Magento_Theme::text.phtml">
+            <arguments>
+                <argument translate="true" name="text" xsi:type="string">Summary Cart</argument>
+                <argument name="tag" xsi:type="string">strong</argument>
+                <argument name="css_class" xsi:type="string">summary title</argument>
+            </arguments>
+        </block>
+    </referenceContainer>
+</page>

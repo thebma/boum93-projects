@@ -1,0 +1,81 @@
+.cart-container {
+    width: 95%;
+    margin: auto;
+}
+
+//The price inside the checkout listing.
+.cart-price .price {
+    font-size: 1.4rem;
+    font-weight: 500;
+} 
+
+//The container of the caption with "Summary".
+.cart-summary {
+    background-color: white;
+}
+
+.cart-summary .summary.title {
+    font-weight: 700;
+}
+
+.cart-container .page-title-wrapper .page-title {
+    font-size: 2.66rem;
+    font-weight: 700;
+    margin: 5px;
+}
+
+.cart.table-wrapper .product-item-photo {
+    width: 20%;
+}
+
+//Remove the border on top of the element under the caption.
+.cart-totals {
+    border: 0;
+}
+
+//The "Order Total Incl. Tax" thingy.
+.grand.totals.incl {
+    border-top: 1px black solid;
+}
+
+//TODO: Not sure if we want to remove shipping, right now it just adds some unused space.
+.block.shipping, .block.discount {
+    display: none; 
+}
+
+// ===== SUMMARY TABLE ===== //
+.cart-totals {
+    padding-top: 10px;
+}
+
+// Add some spacing above and under the line.
+.grand.totals.incl th, .grand.totals.incl td {
+    padding-top: 10px !important;
+}
+
+.totals-tax th, .totals-tax td {
+    padding-bottom: 10px !important;
+}
+
+// Remove all the padding inside the summary table.
+.grand.totals td.amount, .grand.totals th.mark, .totals td.amount, .totals th.mark {
+    padding: 0;
+}
+
+// ===== TOOLBAR ====== //
+.cart-remove-link {
+    background-color: black;
+    padding: 5px 10px;
+    display: block;
+    width: 20px;
+}
+.cart-remove-icon {
+    color: white;
+    font-size: 1.66rem !important;
+    width: 100%;
+    text-align: center;
+}
+
+.cart-remove-icon:hover {
+    color: #aa0000
+}

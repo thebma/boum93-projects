@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Entree opleiding niveau 1 en 2</title>
+    <?php $this->assets->outputCss() ?>
+</head>
+
+<body>
+
+<div id="box">
+
+    <img src="/public/img/toetsen/{{id}}/{{background}}" id="background">
+
+    <div class="container-fluid">
+        <div id="top" class="center center-block">
+            <h1 id="title">Rondje werkplaats</h1><br/>
+        </div>
+    </div>
+
+    <div id="content" class="col-lg-offset-2">
+        <h3 class="col-md-offset-3"> Je hebt alle vragen beantwoord! </h3><br/>
+        <i class="fa fa-check fa-2x col-md-10 col-md-offset-5 green"><span class="result col-md-offset-0">Correct: {{correct}}</span></i>
+        <i class="fa fa-times fa-2x col-md-10 col-md-offset-5 red"> <span class="result col-md-offset-0">Foutief: {{wrong}}</span></i>
+        <i class="fa fa-ban fa-2x col-md-10 col-md-offset-5 yellow"> <span class="result col-md-offset-0">Overgeslagen: {{skipped}}</span></i>
+        <p class="col-md-10 col-md-offset-1 top-margin11 text-center"> Je hebt de toets afgerond, je kan de antwoorden nog aanpassen door op Terug naar toets te klikken. Om de toets in te leveren druk je op de knop Toets inleveren.</p>
+    </div>
+
+    <a id="end-button" class="btn col-md-3 col-md-offset-2 top-margin11 bottom-margin10" href="/vraagtoets"><i class="fa fa-chevron-left"></i> &nbsp; Terug naar toets</a>
+    <a id="end-button" class="btn col-md-3 col-md-offset-2 top-margin11 bottom-margin10" href="/vraagtoets/reset">Toets inleveren &nbsp; <i class="fa fa-chevron-right"></i></a>
+
+</div>
+
+<?php $this->assets->outputJs() ?>
+
+</body>
+</html>

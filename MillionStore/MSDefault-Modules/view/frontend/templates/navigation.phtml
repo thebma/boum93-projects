@@ -1,0 +1,132 @@
+<?php
+
+$isLightTheme = true;
+$isSmall = false;
+
+if($block->isOnLandingPage()) 
+{
+    $isLightTheme = true;
+    $isSmall = false;
+}
+else
+{
+    $isLightTheme = false;
+    $isSmall = true;
+}
+
+$colorBackgroundClass = $block->escapeHtmlAttr($isLightTheme ? "ms-navigation-light" : "ms-navigation-dark");
+$colorTextClass = $block->escapeHtmlAttr($isLightTheme ? "ms-navigation-light-text" : "ms-navigation-dark-text");
+$colorBorderClass = $block->escapeHtmlAttr($isLightTheme ? "ms-navigation-light-border" : "ms-navigation-dark-border");
+$smallBannerBackgrond = $block->escapeHtmlAttr($isLightTheme  ? "promo" : "normal"); 
+$linksBackground = $block->escapeHtmlAttr($isLightTheme ? "ms-links-light" : "ms-links-dark");
+
+$linkMap = $block->getCategoryLinkMap(
+    array("Mannen", "Vrouwen")
+);
+
+?>
+
+<?php if(!$block->isOnPrintPage()): ?>
+<div class="ms-small-banner ms-small-banner-<?= $smallBannerBackgrond ?>">
+    <div class="inner">
+        <div class="left">
+            <p> 
+                Nieuwe Collectie <span class="spacer">|</span> 
+                Gratis verzending vanaf 90 euro <span class="spacer">|</span> 
+                Levering binnen 2 dagen
+            </p>
+        </div>
+        <div class="right">
+            <div class="links big">
+                <ul>
+                    <li>
+                        <a href="/">
+                            <i class="fa fa-home">
+                                HOME
+                            </i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/customer/account">
+                            <i class="fa fa-user">
+                                ACCOUNT
+                            </i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/checkout/cart/">
+                            <i class="fa fa-shopping-cart">
+                                WINKELWAGEN
+                            </i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/">
+                            <i class="fa fa-search">
+                                ZOEKEN
+                            </i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="links icons">
+                <ul>
+                    <li>
+                        <a href="/">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/customer/account">
+                            <i class="fa fa-user">
+                            </i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/checkout/cart/">
+                            <i class="fa fa-shopping-cart">
+                            </i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/">
+                            <i class="fa fa-search">
+                            </i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<?php endif; ?>
+
+<div class="ms-navigation <?=$colorBackgroundClass ?>">
+    <div class="ms-navigation-logo">
+        <a aria-label="Back to homepage" href="/">
+            <img
+                src="<?= $block->getLogoSrc($isLightTheme) ?>" 
+                title="<?= $block->escapeHtmlAttr($block->getLogoAlt()) ?>"
+                alt="<?= $block->escapeHtmlAttr($block->getLogoAlt()) ?>"
+                width="<?= $block->escapeHtmlAttr($block->getLogoWidth()) ?>"
+                height="<?=$block->escapeHtmlAttr($block->getLogoHeight()) ?>"
+            />
+        </a>
+    </div>
+</div>
+
+<?php if(!$block->isOnPrintPage() || !$block->isOnLandingPage()): ?>
+<div class="ms-links <?=$linksBackground?>">
+    <ul>
+    <?php foreach($linkMap as $name => $link): ?>
+        <li><a href="<?=$link?>"><?=$name?></a></li>
+    <?php endforeach; ?>
+    </ul>
+</div>
+<?php endif; ?>

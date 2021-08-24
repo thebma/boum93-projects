@@ -1,0 +1,264 @@
+Add To Cart,Bestellen,,
+Add to Cart,Bestellen,,
+You're reviewing:,Laat je review achter voor:,module,Magento_Review
+This is a required field.,Dit is een verplicht veld.,module,Magento_Catalog
+Adding...,Aan het toevoegen,module,Magento_Catalog
+Added,Toegevoegd!,module,Magento_Catalog
+"You added %1 to your <a href=""%2"">shopping cart</a>.",%1 is toegevoegd aan je <a href=%2>winkelwagen</a>.,module,Magento_Checkout
+Submit Review,Sla recensie op,module,Magento_Review
+Nickname,Naam,module,Magento_Review
+Summary,Onderwerp,module,Magento_Review
+Customer Reviews,Recensies,module,Magento_Review
+Review by,Geplaatst door,module,Magento_Review
+Posted on,Geplaatst op,module,Magento_Review
+Summary,Onderwerp,module,Magento_Theme
+You have no items in your shopping cart.,Je hebt geen artikelen in je winkelwagen,module,Magento_Checkout
+"Click <a href=""%1"">here</a> to continue shopping.","Klik <a href=""%1"">hier</a> om door te gaan met winkelen.",module,Magento_Checkout
+Shopping Cart,Winkelwagen,module,Magento_Checkout
+Please enter a number greater than 0 in this field.,Graag een nummer boven 0 invoeren.,module,Magento_QuoteGraphQl
+Please enter a number greater than 0 in this field.,Graag een nummer boven 0 invoeren.,lib,lib/web/mage/validation.js
+Please enter a number greater than 0 in this field.,"Graag een nummer boven 0 invoeren, gebruik de verwijder knop om te verwijderen.",module,Magento_Ui
+Item,Artikel,module,Magento_Checkout
+Price,Prijs,module,Magento_Checkout
+Qty,Aantal,module,Magento_Checkout
+Subtotal,Subtotaal,module,Magento_Checkout
+Continue Shopping,Doorgaan met winkelen,module,Magento_Checkout
+Clear Shopping Cart,Winkelwagen Leegmaken,module,Magento_Checkout
+Update Shopping Cart,Winkelwagen Updaten,module,Magento_Checkout
+Update Cart,Winkelwagen Updaten,module,Magento_Checkout
+Tax,BTW,module,Magento_Tax
+Order Total,Totaal,module,Magento_Checkout
+Remove Item,Verwijder Artikel,module,Magento_Multishipping
+Remove item,Verwijder Artikel,module,Magento_Multishipping
+Proceed to Checkout,Naar Betalen,module,Magento_Checkout
+Attention,Let op,module,Magento_Ui
+OK,Oke,module,Magento_Ui
+Close,Sluiten,module,Magento_Ui
+Ok,Oke,module,Magento_Ui
+Cancel,Annuleren,module,Magento_Variable
+Save,Opslaan,module,Magento_Variable
+Cancel,Annuleren,module,Magento_Vault
+The requested qty exceeds the maximum qty allowed in shopping cart,Het aantal artikelen overschrijdt het limiet wat ingesteld is op de web winkel. ,module,Magento_InventorySales
+The requested qty is not available,Dit artikel is niet voorradig door het uw opgevraagde hoeveelheid.,module,Magento_InventorySales
+Summary Cart,Betaaloverzicht,module,Magento_Checkout
+Guest checkout is disabled.,Je moet inloggen om te kunnen betalen.,module,Magento_PaypalGraphQl
+Guest checkout is disabled.,Je moet inloggen om te kunnen betalen.,module,Magento_Customer
+Guest checkout is disabled.,Je moet inloggen om te kunnen betalen.,module,Magento_Checkout
+Checkout as a new customer,Betalen met een nieuw account,module,Magento_Customer
+Creating an account has many benefits:,Met een account kun je:,module,Magento_Customer
+See order and shipping status,Je bestellingen bekijken,module,Magento_Customer
+Track order history,Je geschiedenis inkijken van bestelde producten.,module,Magento_Customer
+Check out faster,Sneller betalen,module,Magento_Customer
+Checkout using your account,Betalen met een bestaand account,module,Magento_Customer
+Email Address,Email Adres,module,Magento_Customer
+Create an Account,Maak account aan,module,Magento_Customer
+Password,Wachtwoord,module,Amazon_Payment
+Password,Wachtwoord,module,Magento_Checkout
+Forgot Your Password?,Wachtwoord vergeten?,module,Magento_Checkout
+Email:,Email:,module,Magento_Customer
+Password:,Wachtwoord:,module,Magento_Customer
+Email:,Email:,module,Magento_Theme
+Password:,Wachtwoord:,module,Magento_Theme
+Please enter a valid email address (Ex: johndoe@domain.com).,Graag een correct email invoeren (bijv. gebruiker@domein.nl),lib,lib/web/mage/validation.js
+Sign Out,Uitloggen,module,Magento_Customer
+Sign In,Inloggen,module,Magento_Customer
+Invalid login or password.,Verkeerde gebruikersnaam of wachtwoord.,module,Magento_Customer
+Create New Customer Account,Maak nieuw account aan,,
+Personal Information,Persoonsgegevens,module,Magento_Customer
+Sign Up for Newsletter,Nieuwsbrief ontvangen,module,Magento_Customer
+Allow remote shopping assistance,Sta hulp op afstand toe.,,
+Sign-in Information,Logingegevens,module,Magento_Customer
+Confirm Password,Herhaal Wachtwoord,module,Magento_Customer
+Password Strength,Sterkte van wachtwoord,module,Magento_Customer
+No Password,Geen wacthwoord,module,Magento_Customer
+Weak,Zwak,module,Magento_Customer
+Medium,Goed,module,Magento_Customer
+Strong,Sterk,module,Magento_Customer
+Very Strong,Zeer sterk,module,Magento_Customer
+Minimum length of this field must be equal or greater than %1 symbols. Leading and trailing spaces will be ignored.,Een wachtwoord moet minimaal 8 of meer karakters bevatten.,module,Magento_Ui
+"Minimum of different classes of characters in password is %1. Classes of characters: Lower Case, Upper Case, Digits, Special Characters.","Een wachtwoord moet minimaal %1 veschillende karakters bevatten, gebruik een hoofdletter, cijfer of een special karakter.",module,Magento_Ui
+Back,Terug,,
+First Name,Voornaam,module,Magento_Customer
+Last Name,Achternaam,module,Magento_Customer
+Please enter the same value again.,Waarden komen niet overeen.,lib,lib/web/mage/validation.js
+LACA_TOOLTIP,Hiermee staat u toe dat de Million-Store.nl beheerder(s) in kunnen loggen op uw account en acties kan ondernemen voor u. Zodat wij u beter van dienst kunnen zijn en eventuele problemen kunnen verhelpen.,,
+Thank you for registering with %1.,"Bedankt voor uw registratie bij %1, uw wordt nu doorverwezen naar uw account.",module,Magento_Customer
+My Account,Uw Account,module,Magento_Customer
+My Orders,Bestellingen,module,Magento_Sales
+Order Summary,Overzicht Bestelling,module,Magento_Checkout
+Cart Subtotal,Subtotaal,module,Magento_Checkout
+In Cart,in Winkelwagen,module,Magento_Msrp
+Item in Cart,Artikel(en) in winkelwagen,,
+Items in Cart,Artikelen in winkelwagen,,
+View Details,Productinformatie,module,Magento_Checkout
+Payment Methods,Betaalmethodes,module,Magento_Payment
+Payment Method,Betaalmethode,module,Magento_Checkout
+Company,Bedrijf,module,Magento_Customer
+City,Plaats,module,Magento_Sales
+Country,Land,module,Magento_Sales
+Street Address,Adres,module,Magento_Sales
+Phone Number,Telefoonnummer,module,Magento_Sales
+Zip/Postal Code,Postcode,module,Magento_Sales
+State/Province,Provincie,module,Magento_Sales
+For delivery questions.,Hiermee kunnen we u bereiken als wij vragen hebben over de levering van uw bestelling.,module,Magento_Checkout
+Place Order,Plaats Bestelling,module,Magento_Checkout
+Check / Money Order,Wat is deze?,module,Magento_OfflinePayments
+Account Information,Account Informatie,,
+Contact Information,Contactgegevens,module,Magento_Customer
+Edit,Aanpassen,,
+Change Password,Wachtwoord veranderen,module,Magento_Customer
+Edit Address,Adres aanpassen,module,Magento_Customer
+Manage Addresses,Beheer adressen,module,Magento_Customer
+Default Billing Address,Factuuradres,module,Magento_Customer
+Default Shipping Address,Bezorgadres,module,Magento_Customer
+Newsletters,Nieuwsbrief Status,module,Magento_Customer
+"You are subscribed to ""General Subscription"".",U ontvangt onze nieuwsbrieven.,module,Magento_Customer
+You are subscribed to our newsletter.,U ontvangt onze nieuwsbrieven.,module,Magento_Customer
+You aren't subscribed to our newsletter.,U ontvangt geen nieuwsbrieven.,module,Magento_Customer
+Address Book,Adressen,module,Magento_Customer
+Recent Orders,Recente Bestellingen,module,Magento_Sales
+Order #,Ordernummer,module,Magento_Checkout
+Order #,Ordernummer,module,Magento_Customer
+Order # ,Ordernummer,module,Magento_Sales
+Date,Datum,,
+Ship To,Verzonden naar,module,Magento_Sales
+Action,Acties,,
+View Order,Bekijk,module,Magento_Sales
+Reorder,Bestel opnieuw,module,Magento_Sales
+Pending,In behandeling,module,Magento_Sales
+Refunded,Geretourneerd,module,Magento_Sales
+Canceled,Geannuleerd,module,Magento_Sales
+Unknown State,Onbekend,module,Magento_Sales
+Paid,Betaald,module,Magento_Sales
+View All,Bekijk alles,module,Magento_Sales
+Stored Payment Methods,Betaalmethoden,module,Magento_Vault
+My Product Reviews,Recensies,module,Magento_Review
+Newsletter Subscriptions,Nieuwsbrief Abonnementen,module,Magento_Newsletter
+Newsletter Subscription,Nieuwsbrief Abonnement,module,Magento_Newsletter
+Edit Account Information,Account informatie aanpassen,module,Magento_Customer
+Change Email,Verander Email,module,Magento_Customer
+Change Email and Password,Verander Email en Wachtwoord,module,Magento_Customer
+Current Password,Huidige Wachtwoord,module,Magento_Customer
+New Password,Nieuwe Wachtwoord,,
+Confirm New Password,Bevestig Nieuwe Wachtwoord,,
+Go back,Terug,module,Magento_Customer
+Change Billing Address,Verander Factuuradres,,
+Change Shipping Address,Verander Bezorgadres,,
+Default Addresses,Adressen,module,Magento_Customer
+Additional Address Entries,Extra Adressen,module,Magento_Customer
+You have no other address entries in your address book.,Je hebt nog geen extra adressen opgegeven.,module,Magento_Customer
+Add New Address,Adres Toevoegen,,
+Use as my default billing address,Gebruik als standaard factuuradres,module,Magento_Customer
+Use as my default shipping address,Gebruik als standaard bezorgadres,module,Magento_Customer
+Save Address,Adres opslaan,,
+You have no stored payment methods.,Uw heeft (nog) geen opgeslagen betaalmethoden.,module,Magento_Vault
+Show,Toon,module,Magento_Theme
+per page,per pagina,module,Magento_Theme
+You have submitted no reviews,Je hebt nog geen recensies achtergelaten.,,
+Newsletter Subscriptions,Nieuwsbrief Abonnement,,
+Subscription option,Abonnement opties,module,Magento_Customer
+General Subscription,Ontvang algemene Nieuwsbrief,module,Magento_Customer
+Thank you for your purchase!,Bedankt voor uw aankoop,module,Magento_Checkout
+Your order number is: %1.,Uw bestellingsnummer is %1,module,Magento_Checkout
+We'll email you an order confirmation with details and tracking info.,We hebben een email verzonden met de bevestiging van uw bestelling en de manier waarop u uw bestelling kan volgen.,module,Magento_Checkout
+Print receipt,Bestelling details printen,module,Magento_Checkout
+Customer Login,Klantenlogin,,
+Registered Customers,Bestaande Klant,module,Magento_Customer
+New Customers,Nieuwe Klant,module,Magento_Customer
+"If you have an account, sign in with your email address.","Als u al een account heeft, kunt u inloggen met uw email adres.",module,Magento_Customer
+"Creating an account has many benefits: check out faster, keep more than one address, track orders and more.",Nog geen account? Maak hem snel aan!,module,Magento_Customer
+* Required Fields,* Verplichte velden,,
+Please enter your email address below to receive a password reset link.,Voer je email hieronder in om een reset link te ontvangen.,module,Magento_Customer
+Reset My Password,Reset wachtwoord,module,Magento_Customer
+If there is an account associated with %1 you will receive an email with a link to reset your password.,"U zult een email met het reset link ontvangen op %1, mits deze bestaat.",module,Magento_Customer
+Please enter your email.,Graag een email invoeren.,module,Magento_Customer
+Invalid Form Key. Please refresh the page.,"Formulier code is incorrect, graag de pagina verversen.",module,Magento_Customer
+New Address,Nieuw Adres,module,Magento_Checkout
+Save in address book,Opslaan in adressenboek,module,Magento_Sales
+Order Information,Bestellingsinformatie,module,Magento_Sales
+Order ,Bestelling,,
+Order Date:,Bestellingsdatum,module,Magento_Sales
+Order Date,Bestellingsdatum,module,Magento_Sales
+Items Ordered,Bestelde Artikel(en),module,Magento_Sales
+Product Name,Artikel,module,Magento_Sales
+Grand Total,Totaal,module,Magento_Sales
+Order Information,Bestelling Details,module,Magento_Sales
+Shipping Address: ,Bezorgadres:,,
+Billing Address: ,Factuuradres:,,
+Billing Address,Factuuradres,,
+Shipping Address,Bezorgadres,,
+Ordered,Aantal,module,Magento_Sales
+Shipped,Verzonden,module,Magento_Sales
+Order #,Bestelling #,,
+Order # %1,Bestelling # %1,,
+"<span class=""label"">Order Date:</span> %1","<span class=""label"">Besteldatum:</span> %1",module,Magento_Sales
+You submitted your review for moderation.,Bedankt voor je recensie!,module,Magento_Review
+Contacts Section,Contact,module,Magento_Contact
+Contacts,Contacten,module,Magento_Contact
+Contact Us,Contactformulier,module,Magento_Contact
+Email Options,Email Opties,module,Magento_Contact
+Send Emails To,Stuur Email naar,module,Magento_Contact
+Email Sender,Verzender,module,Magento_Contact
+Name,Naam,,
+Page not found.,Pagina niet gevonden,module,Magento_Contact
+Thanks for contacting us with your comments and questions. We'll respond to you very soon.,"Bedankt voor u email, wij zullen z.s.m. in behandeling nemen.",module,Magento_Contact
+An error occurred while processing your form. Please try again later.,"Er ging iets fout, probeer eens de pagina te verversen.",module,Magento_Contact
+Enter the Name and try again.,Aub. naam invoeren en opnieuw proberen,module,Magento_Contact
+Enter the comment and try again.,Aub. inhoud invoeren en opnieuw proberen,module,Magento_Contact
+The email address is invalid. Verify the email address and try again.,Gegeven emailadres is niet correct.,module,Magento_Contact
+* Required Fields,* Verplichte velden,module,Magento_Contact
+Write Us,,module,Magento_Contact
+Jot us a note and we’ll get back to you as quickly as possible.,Stuur ons een bericht en we zullen z.s.m reageren!,module,Magento_Contact
+Name,Naam,module,Magento_Contact
+Email,Emailadres,module,Magento_Contact
+Phone Number,Telefoonnummer,module,Magento_Contact
+What’s on your mind?,Inhoud,module,Magento_Contact
+Submit,Verstuur,module,Magento_Contact
+My Recent Reviews,Mijn Recenties,module,Magento_Review
+Created,Aangemaakt,module,Magento_Review
+Rating,Beoordeling,module,Magento_Review
+See Details,Bekijk,module,Magento_Review
+Review Details,Recensie,module,Magento_Review
+Submitted on %1,Aangemaakt op %1,module,Magento_Review
+Back to My Reviews,Terug,module,Magento_Review
+You are signed out,Je bent uitgelogd!,module,Magento_Customer
+You have signed out and will go to our homepage in 5 seconds.,Je zal binnen 5 seconden naar de home pagina doorgestuurt worden.,module,Magento_Customer
+Items %1 to %2 of %3 total,Items %1 tot %2 van %3 totaal,module,Magento_Theme
+Processing,In behandeling,module,Magento_Sales
+On Hold,Stil gezet,module,Magento_Sales
+Complete,Afgerond,module,Magento_Sales
+Closed,Gesloten,module,Magento_Sales
+Print Order,Afdrukken,module,Magento_Sales
+Back to My Orders,Terug,module,Magento_Shipping
+Back to My Orders,Terug,module,Magento_Sales
+Shipping Methods,Verzendmethoden,module,Magento_Multishipping
+Shipping Method,Verzendmethoden,module,Magento_Shipping
+Ship Here,Zet als Bezorgadres,,
+Ship Here,Zet als Bezorgadres,,
+Next,Volgende,,
+-- Please Select --,Selecteer een optie,,
+My billing and shipping address are the same,Bezorgadres en factuuradres zijn hetzelfde.,module,Magento_Checkout
+Ship To:,Verzenden naar,module,Magento_Checkout
+Shipping Method:,Verzendingsmethode,module,Magento_Checkout
+We can't find products matching the selection.,We konden geen producten vinden in deze categorie,module,Magento_Catalog
+Sort By,Sorteer op,module,Magento_Catalog
+Position,Positie,,
+Shop By,Filter op,module,Magento_Catalog
+Shopping Options,Opties,module,Magento_Catalog
+Now Shopping by,Toegepaste Filters:,module,Magento_LayeredNavigation
+Remove This Item,Verwijder,module,Magento_LayeredNavigation
+Remove,Verwijder,module,Magento_LayeredNavigation
+Clear All,Reset,module,Magento_LayeredNavigation
+Clear All,Reset,module,Magento_Catalog
+Clear All,Reset,theme,frontend/Magento/luma
+Shipping & Handling (%1),Verzendkosten (%1),module,Magento_Quote
+Shipping & Handling,Verzendkosten,module,Magento_Quote
+Shipping,Verzending,module,Magento_Quote
+We'll send your order confirmation here.,Hier sturen wij de informatie van je bestelling heen.,module,Magento_Checkout
+You can create an account after checkout.,Je kan een account aanmaken na het voltooien van je bestelling.,,
+Address Information,Adresgegevens,module,Magento_Customer
+Address Information,Adresgegevens,module,Magento_Sales
+Address Information,Adresgegevens,module,Magento_Customer
+Jot us a note and we’ll get back to you as quickly as possible.,Stuur ons een bericht en we zullen z.s.m reageren!,module,Magento_Contact
+Jot us a note and we’ll get back to you as quickly as possible.,Stuur ons een bericht en we zullen z.s.m reageren!,module,Magento_Contact
+Review,Recensie,module,Magento_Review

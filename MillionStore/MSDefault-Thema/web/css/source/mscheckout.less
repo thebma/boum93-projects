@@ -1,0 +1,68 @@
+//Hide the progressbar on the payment screen.
+.checkout-index-index .opc-progress-bar {
+    display: none;
+}
+
+//Hide the "apply" discount code thingy, we don't use it as of now.
+.checkout-index-index .discount-code {
+    display: none;
+}
+
+//The order summary block.
+.checkout-index-index .opc-block-summary {
+    background-color: white;
+    padding: 0;
+}
+
+.action.multicheckout {
+    display: none; 
+}
+
+// === CHECKOUT SUCCESS === //
+.checkout-onepage-success .page-title {
+    font-weight: 700;
+    font-size: 2.5rem;
+    padding: 0;
+    margin: 0;
+
+    padding-bottom: 20px;
+}
+
+.checkout-onepage-success .actions-toolbar {
+    padding-top: 20px;
+}
+
+// === CHECKOUT PRINT === //
+//Hide the go back button on the print page.
+.sales-order-print .actions-toolbar .secondary .action.back {
+    display: none;
+}
+
+// == CHECKOUT SHIPPING == //
+
+//Remove the hidous amounts of borders.
+.opc-wrapper .step-title, .opc-block-shipping-information .shipping-information-title, .opc-block-summary > .title, .checkout-agreements-items .checkout-agreements-item-title {
+    border: 0;
+}
+
+//The checkmark on the OPC.
+.opc-wrapper .shipping-address-item.selected-item:after {
+    background: black;
+}
+
+//The border of OPC.
+.opc-wrapper .shipping-address-item.selected-item {
+    border-color: black;
+}
+
+// === CHECKOUT PAYMENT === //
+//The container all the shipping stuff rests in.
+.opc-block-shipping-information {
+    padding: 0;
+}
+
+//Titles of each section in that container
+.opc-block-shipping-information .shipping-information-title {
+    padding: 0;
+    margin: 0;
+}

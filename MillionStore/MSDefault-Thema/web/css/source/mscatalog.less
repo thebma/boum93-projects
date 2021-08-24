@@ -1,0 +1,60 @@
+@catalog-elements: 3;               // How many product elements we have inside the catalog product list, default 4.
+@catalog-image-padding: 0;          // How much margin there should be between the images of the catalog product list.
+
+@catalog-name-size: 1.7rem;         // How big the product name font size should be.
+@catalog-price-size: 1.4rem;        // How big the font size for the price tag should be.
+
+//Remove the margin between the images on the catalog product list.
+.page-layout-1column .block.widget .products-grid .product-item {
+    margin-left: @catalog-image-padding;
+    width: calc(100% / @catalog-elements);
+
+    //This affects the last last element of these images.
+    &:nth-child(3n + 1) {
+        margin-left: @catalog-image-padding;
+    }
+
+    margin-bottom: 0;
+    padding: 0px 10px 0px 10px;
+}
+
+//Removes the "Add to chart", "Compare" and "Wishlist" buttons under each product inside the catalog product list
+.products-grid .product-item-actions {
+    display: none;
+}
+
+// Affects the name of the product inside the atalog product list (on the homepage).
+.product-item-details .product-item-name a {
+    font-size: @catalog-name-size;
+    font-weight: 700;
+}
+
+//The margin around the price on homepage.
+.product-item .price-box {
+    margin: 0;
+}
+
+// Affect the price label under the product name inside the catalog product grid.
+.product-item .price-box .price {
+    font-size: @catalog-price-size;
+    font-weight: 700;
+}
+
+.block-products-list.grid {
+    margin: 0;
+}
+
+//Review box above the price (on homepage).
+.product-reviews-summary.short {
+    display: none;
+}
+
+
+.product-image-container {
+    max-width: 100%;
+    width: 100%;
+}
+
+.product-image-photo {
+    width: 100% !important;
+}

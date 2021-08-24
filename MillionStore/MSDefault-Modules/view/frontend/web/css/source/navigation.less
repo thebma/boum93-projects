@@ -1,0 +1,251 @@
+@navigation-columns: 3;
+@navigation-links: 4;
+@navigation-column-padding-outer: 50px;
+@navigation-column-padding-bottom: 20px;
+
+@small-banner-size: 40px;
+@small-banner-size-xs: 75px;
+
+// === LOGO BANNER == //
+.ms-navigation {
+    display: flex;
+    justify-content: center;
+}
+
+.ms-navigation-sticky {
+    position: fixed;
+}
+
+.ms-navigation-links {
+    display: flex;
+    align-self: flex-end;
+
+    width: 100% / @navigation-columns;
+
+    border-top: 1px #d0d0d0 solid;
+}
+
+.ms-navigation-link {
+    margin: 20px;
+    font-size: 1.66rem;
+}
+
+.ms-navigation-links.left {
+    padding: 0px 0px @navigation-column-padding-bottom @navigation-column-padding-outer;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.ms-navigation-links.right {
+    padding: 0px @navigation-column-padding-outer @navigation-column-padding-bottom 0px;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+// === SMALL BANNER === //
+.ms-small-banner {
+    width: 100%;
+    height: ~"calc(@{small-banner-size}/2)";
+    color:#ddd;
+    padding: ~"calc(@{small-banner-size}/2)";
+}
+
+.ms-small-banner-promo {
+    background-color: #ffe7b5;
+}
+.ms-small-banner-normal {
+    background-color: #222;
+}
+
+.ms-small-banner .inner {
+    width: 95%;
+    margin: 0;
+}
+
+.ms-small-banner .inner .left {
+    font-weight: 500;
+    position: absolute;
+    color: black;
+    top: ~"calc(@{small-banner-size}/2)";
+    left: ~"calc((@{small-banner-size}/2) - 5px)";
+    width: 100%;
+}
+
+.ms-small-banner .inner .left .spacer {
+    padding: 0px 5px;
+    color: black;
+}
+
+.ms-small-banner .inner .left p {
+    letter-spacing: 1px;
+    color: black;
+}
+
+.ms-small-banner .inner .right {
+    font-size: 1.1rem; 
+    position: absolute;
+
+    top: ~"calc((@{small-banner-size}/2 + 2px))";
+    right: ~"calc((@{small-banner-size}/2) - 5px)";
+    width: 100%;
+}
+
+.links ul {
+    list-style: none;
+    margin: 0;
+    text-align: end;
+}
+
+.links ul li {
+    display:inline-block;
+    margin: 0 ~"calc(@{small-banner-size}/2)" 0 0;
+    text-align: end;
+    vertical-align: middle;
+}
+
+.links ul li a {
+    color: black;
+}
+
+.links ul li a i:hover {
+    color:#black;
+    text-decoration: underline;
+}
+
+.links ul li a:visited {
+    color:#black;
+}
+
+.links.icons i {
+    font-size: 2rem;
+}
+
+.links.icons {
+    display:none;
+}
+
+@media screen and (max-width: 950px) {
+    .links.big { display: none; }
+    .links.icons { display: block; }
+}
+
+@media screen and (max-width: 800px) {
+    .ms-small-banner {
+        width: 100%;
+        height: @small-banner-size-xs;
+        padding: ~"calc(@{small-banner-size-xs}/2)" 0px;
+    }
+
+    .ms-small-banner .inner {
+        width: 100%;
+    }
+
+    .ms-small-banner .inner .right {
+        position: initial;
+        padding-top: 10px;
+    }
+
+    .ms-small-banner .inner .left {
+        position: initial;
+        text-align: center;
+    }
+
+    .links.icons i {
+        font-size: 2.66rem;
+    }
+
+    .links ul {
+        text-align: center;
+        padding: 0;
+    }
+}
+
+// === LINKS LIST === //
+.ms-links {
+    width: 100%;
+    text-align: center;
+}
+
+.ms-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ms-links ul li {
+    display: inline-block;
+    padding: 20px 15px;
+    margin: 0;
+}
+
+.ms-links ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.66rem;
+    font-weight: 700;
+}
+
+.ms-links ul li a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.ms-links ul li a:visited {
+    color: black;
+}
+
+
+// === COLORS === //
+.ms-navigation-light-text {
+    color: white;
+}
+
+.ms-navigation-light-text:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.ms-navigation-light-text:visited {
+    color: white;
+}
+
+.ms-navigation-dark {
+    background-color: #fdfdfd
+}
+
+.ms-navigation-dark-text {
+    color: black;
+}
+
+.ms-navigation-dark-text:visited {
+    color: black;
+}
+
+.ms-navigation-dark-text:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.ms-navigation-light-border {
+    border-top: 1px #d0d0d0 solid;
+}
+
+.ms-navigation-dark-border {
+    border-top: 1px #2c2c2c solid;
+}
+
+.ms-navigation-light {
+    background-color: rgb(15, 15, 15);
+}
+
+.ms-links-light {
+    background-color: #fbfbfb;
+    border-bottom: 1px solid #ededed;
+}
+
+.ms-links-dark {
+    background-color: #fdfdfd;
+    border-bottom: 1px #eee solid;
+}
+
+

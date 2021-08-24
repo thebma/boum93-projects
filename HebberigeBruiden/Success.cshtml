@@ -1,0 +1,35 @@
+﻿@{ 
+    Page.Title = "Login";
+    Page.ContentWidth = 7;
+
+    Layout = "~/Layouts/_DefaultLayout.cshtml";
+
+    string action = (string)Request.Params["action"];
+}
+
+
+<div class="main-content col-md-8 offset-md-2">
+    <div class="col-md-12">
+        <div class="row">
+            <h1>Success!</h1>
+        </div>
+
+        <div class="row">
+            @if(action == "login")
+            {
+                <p>You have successfuly logged in, you can now continue what you were doing!</p>
+            }
+            
+            @if (action == "register")
+            {
+                <p>You have created a new account, you can now <a href="~/Login.cshtml">login</a>!</p>
+            }
+
+            @if(action == "logout")
+            {
+                <p>You have succesfully logged out!</p>
+            }
+
+        </div>
+    </div>
+</div>

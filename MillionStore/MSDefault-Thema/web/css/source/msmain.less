@@ -1,0 +1,71 @@
+@slit-width: 55%;
+@narrow-width: 85%;
+@wide-width: 100%;
+@main-padding: 20px;
+
+// === Bread crumbs === //
+.breadcrumbs {
+    padding: 0;
+    margin-left: 6%;
+}
+
+.breadcrumbs .items {
+    font-size: 1.5rem;
+    color: black;
+}
+
+//The ">" icons between breadcrumbs.
+.breadcrumbs .item:not(:last-child):after {
+    font-size: 2rem;
+    line-height: 22px;;
+}
+
+//FYI: slit /slɪt/ noun a long, narrow cut or opening.
+.pagesize-slit {
+    margin: auto;
+    padding: 0px @main-padding 0px @main-padding;
+    width: @slit-width;
+    max-width: @slit-width;
+}
+
+.pagesize-narrow {
+    margin: auto;
+    padding: 0px @main-padding 0px @main-padding;
+    width: @narrow-width;
+    max-width: @narrow-width;
+}
+
+.pagesize-wide {
+    margin: 0;
+    padding: 0px @main-padding 0px @main-padding;
+    width: @wide-width;
+    max-width: @wide-width;
+}
+
+// === Page titles === //
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+// === WIDE PAGES === //
+//Default to every page to use a narrow configuration.
+.page-main { .pagesize-narrow(); }
+
+// === WIDE PAGES === //
+// Pages for a wide configuration.
+.cms-index-index .page-wrapper .page-main { .pagesize-wide(); }      //Landing
+
+// === SLIT PAGES === //
+.customer-address-index .page-wrapper .page-main { .pagesize-slit(); }          //Address page.
+.customer-account-edit .page-wrapper .page-main { .pagesize-slit(); }           //Account information screen.
+.vault-cards-listaction .page-wrapper .page-main { .pagesize-slit(); }          //Stored payment methods page.
+.newsletter-manage-index .page-wrapper .page-main { .pagesize-slit(); }         //Newsletter subscription.
+.checkout-onepage-success .page-wrapper .page-main { .pagesize-slit(); }        //Thanks you for your purchase screen.
+.cms-noroute-index .page-wrapper .page-main { .pagesize-slit(); }               //404 page.
+.contact-index-index .page-wrapper .page-main { .pagesize-slit(); }             //Contact page
+.review-customer-index .page-wrapper .page-main { .pagesize-slit(); }           //My reviews page.
+.review-customer-view .page-wrapper .page-main { .pagesize-slit(); }            //Review details page
+.customer-account-logoutsuccess .page-wrapper .page-main { .pagesize-slit() }   //Logout page
+.customer-address-form .page-wrapper .page-main { .pagesize-slit() }            //Address form.

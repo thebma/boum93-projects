@@ -1,0 +1,72 @@
+﻿@{
+    //Make a dictionary of all the navigation links. Based on the login state.
+    List<NavLink> navigationLinks = new List<NavLink>();
+    navigationLinks.Add(new NavLink("Home", "Index.cshtml", "fa-home", NavLinkAlignment.Left, NavLinkShow.Always));
+    navigationLinks.Add(new NavLink("Wishlist", "Wishlist.cshtml", "fa-star", NavLinkAlignment.Left, NavLinkShow.Always));
+    navigationLinks.Add(new NavLink("Login", "Login.cshtml", "fa-sign-in-alt", NavLinkAlignment.Right, NavLinkShow.LoggedOut));
+    navigationLinks.Add(new NavLink("Logout", "Logout.cshtml", "fa-sign-out-alt", NavLinkAlignment.Right, NavLinkShow.LoggedIn));
+    navigationLinks.Add(new NavLink("Register", "Register.cshtml", "fa-plus", NavLinkAlignment.Right, NavLinkShow.LoggedOut));
+}
+
+<nav class="navbar navbar-expand-md ">
+
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+
+            @foreach (NavLink link in navigationLinks)
+            {
+                if (link.Alignnment != NavLinkAlignment.Left ||
+                    !link.ShouldShow(Authenication.LoggedIn))
+                {
+                    continue;
+                }
+
+                if (Page.Title == link.Name)
+                {
+                     <li class="nav-item active nav-links">
+                         <a class="nav-link" href="@link.Href">
+                             <i class="fas @link.Icon"></i>
+                             @link.Name
+                         </a>
+                    </li>
+                }
+                else
+                {
+                     <li class="nav-item nav-links">
+                         <a class="nav-link" href="@link.Href" align="center">
+                             <i class="fas @link.Icon"></i>
+                             @link.Name
+                         </a>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+
+    <div class="mx-auto order-0">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <i class="fas fa-align-justify"></i>
+        </button>
+    </div>
+
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+
+           @foreach (NavLink link in navigationLinks)
+           {
+               if (link.Alignnment != NavLinkAlignment.Right ||
+                   !link.ShouldShow(Authenication.LoggedIn))
+               {
+                   continue;
+               }
+
+                <li class="nav-item nav-links">
+                    <a class="nav-link" href="@link.Href" align="center">
+                        <i class="fas @link.Icon"></i>
+                        @link.Name
+                    </a>
+                </li>
+           }
+        </ul>
+    </div>
+</nav>
